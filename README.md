@@ -1,25 +1,26 @@
-# Create React App [![Build Status](https://travis-ci.org/facebookincubator/create-react-app.svg?branch=master)](https://travis-ci.org/facebookincubator/create-react-app)
+![logo](https://avatars3.githubusercontent.com/u/23227594?v=3&s=200)
 
-Create React apps with no build configuration.
+# Create Magic Component
+Create Magic component with no build configuration. 
 
-* [Getting Started](#getting-started) – How to create a new app.
-* [User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md) – How to develop apps bootstrapped with Create React App.
+This is the tool for make Magic Component.
+
+* [Getting Started](#getting-started) – How to create a new component.
+* [User Guide](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md) – How to develop component bootstrapped with Create Magic Component.
 
 ## tl;dr
 
 ```sh
-npm install -g create-react-app
+npm install -g create-magic-component
 
-create-react-app my-app
-cd my-app/
+create-magic-component my-component
+cd my-component/
 npm start
 
 ```
 
-Then open [http://localhost:3000/](http://localhost:3000/) to see your app.<br>
+Then open [http://localhost:3000/](http://localhost:3000/) to see your component.<br>
 When you’re ready to deploy to production, create a minified bundle with `npm run build`.
-
-<img src='https://camo.githubusercontent.com/506a5a0a33aebed2bf0d24d3999af7f582b31808/687474703a2f2f692e696d6775722e636f6d2f616d794e66434e2e706e67' width='600' alt='npm start'>
 
 ## Getting Started
 
@@ -28,7 +29,7 @@ When you’re ready to deploy to production, create a minified bundle with `npm 
 Install it once globally:
 
 ```sh
-npm install -g create-react-app
+npm install -g create-magic-component
 ```
 
 **You’ll need to have Node >= 4 on your machine**.
@@ -37,20 +38,20 @@ npm install -g create-react-app
 
 **This tool doesn’t assume a Node backend**. The Node installation is only required for the build tools that rely on it locally, such as Webpack and Babel.
 
-### Creating an App
+### Creating an Component
 
-To create a new app, run:
+To create a new component, run:
 
 ```sh
-create-react-app my-app
-cd my-app
+create-magic-component my-component
+cd my-component
 ```
 
-It will create a directory called `my-app` inside the current folder.<br>
+It will create a directory called `my-component` inside the current folder.<br>
 Inside that directory, it will generate the initial project structure and install the transitive dependencies:
 
 ```
-my-app/
+my-component/
   README.md
   node_modules/
   package.json
@@ -72,7 +73,7 @@ Once the installation is done, you can run some commands inside the project fold
 
 ### `npm start`
 
-Runs the app in development mode.<br>
+Runs the component in development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
@@ -85,46 +86,46 @@ You will see the build errors and lint warnings in the console.
 Runs the test watcher in an interactive mode.  
 By default, runs tests related to files changes since the last commit.
 
-[Read more about testing.](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests)
+[Read more about testing.](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#running-tests)
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
+Builds the component for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Your component is ready to be deployed!
 
 ## User Guide
 
-The [User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md) includes information on different topics, such as:
+The [User Guide](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md) includes information on different topics, such as:
 
-- [Updating to New Releases](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases)
-- [Folder Structure](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#folder-structure)
-- [Available Scripts](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#available-scripts)
-- [Displaying Lint Output in the Editor](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#displaying-lint-output-in-the-editor)
-- [Installing a Dependency](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#installing-a-dependency)
-- [Importing a Component](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#importing-a-component)
-- [Adding a Stylesheet](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-stylesheet)
-- [Post-Processing CSS](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#post-processing-css)
-- [Adding Images and Fonts](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-images-and-fonts)
-- [Using the `public` Folder](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#using-the-public-folder)
-- [Adding Bootstrap](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-bootstrap)
-- [Adding Flow](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-flow)
-- [Adding Custom Environment Variables](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-custom-environment-variables)
-- [Can I Use Decorators?](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#can-i-use-decorators)
-- [Integrating with a Node Backend](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#integrating-with-a-node-backend)
-- [Proxying API Requests in Development](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#proxying-api-requests-in-development)
-- [Using HTTPS in Development](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#using-https-in-development)
-- [Generating Dynamic `<meta>` Tags on the Server](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#generating-dynamic-meta-tags-on-the-server)
-- [Running Tests](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests)
-- [Deployment](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment)
+- [Updating to New Releases](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#updating-to-new-releases)
+- [Folder Structure](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#folder-structure)
+- [Available Scripts](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#available-scripts)
+- [Displaying Lint Output in the Editor](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#displaying-lint-output-in-the-editor)
+- [Installing a Dependency](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#installing-a-dependency)
+- [Importing a Component](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#importing-a-component)
+- [Adding a Stylesheet](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#adding-a-stylesheet)
+- [Post-Processing CSS](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#post-processing-css)
+- [Adding Images and Fonts](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#adding-images-and-fonts)
+- [Using the `public` Folder](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#using-the-public-folder)
+- [Adding Bootstrap](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#adding-bootstrap)
+- [Adding Flow](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#adding-flow)
+- [Adding Custom Environment Variables](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#adding-custom-environment-variables)
+- [Can I Use Decorators?](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#can-i-use-decorators)
+- [Integrating with a Node Backend](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#integrating-with-a-node-backend)
+- [Proxying API Requests in Development](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#proxying-api-requests-in-development)
+- [Using HTTPS in Development](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#using-https-in-development)
+- [Generating Dynamic `<meta>` Tags on the Server](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#generating-dynamic-meta-tags-on-the-server)
+- [Running Tests](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#running-tests)
+- [Deployment](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#deployment)
 
 A copy of the user guide will be created as `README.md` in your project folder.
 
 ## How to Update to New Versions?
 
-Please refer to the [User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases) for this and other information.
+Please refer to the [User Guide](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md#updating-to-new-releases) for this and other information.
 
 ## Philosophy
 
@@ -136,7 +137,7 @@ Please refer to the [User Guide](https://github.com/facebookincubator/create-rea
 
 ## Why Use This?
 
-**If you’re getting started** with React, use `create-react-app` to automate the build of your app. There is no configuration file, and `react-scripts` is the only extra build dependency in your `package.json`. Your environment will have everything you need to build a modern React app:
+**If you’re getting started** with React, use `create-magic-component` to automate the build of your component. There is no configuration file, and `react-scripts` is the only extra build dependency in your `package.json`. Your environment will have everything you need to build a modern React component:
 
 * React, JSX, and ES6 support.
 * Language extras beyond ES6 like the object spread operator.
@@ -147,7 +148,7 @@ Please refer to the [User Guide](https://github.com/facebookincubator/create-rea
 
 **The feature set is intentionally limited**. It doesn’t support advanced features such as server rendering or CSS modules. The tool is also **non-configurable** because it is hard to provide a cohesive experience and easy updates across a set of tools when the user can tweak anything.
 
-**You don’t have to use this.** Historically it has been easy to [gradually adopt](https://www.youtube.com/watch?v=BF58ZJ1ZQxY) React. However many people create new single-page React apps from scratch every day. We’ve heard [loud](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4) and [clear](https://twitter.com/thomasfuchs/status/708675139253174273) that this process can be error-prone and tedious, especially if this is your first JavaScript build stack. This project is an attempt to figure out a good way to start developing React apps.
+**You don’t have to use this.** Historically it has been easy to [gradually adopt](https://www.youtube.com/watch?v=BF58ZJ1ZQxY) React. However many people create new single-page React components from scratch every day. We’ve heard [loud](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4) and [clear](https://twitter.com/thomasfuchs/status/708675139253174273) that this process can be error-prone and tedious, especially if this is your first JavaScript build stack. This project is an attempt to figure out a good way to start developing React components.
 
 ### Converting to a Custom Setup
 
@@ -169,11 +170,11 @@ Some features are currently **not supported**:
 * LESS or Sass.
 * Hot reloading of components.
 
-Some of them might get added in the future if they are stable, are useful to majority of React apps, don’t conflict with existing tools, and don’t introduce additional configuration.
+Some of them might get added in the future if they are stable, are useful to majority of React Components, don’t conflict with existing tools, and don’t introduce additional configuration.
 
 ## What’s Inside?
 
-The tools used by Create React App are subject to change.
+The tools used by Create Magic Component are subject to change.
 Currently it is a thin layer on top of many amazing community projects, such as:
 
 * [webpack](https://webpack.github.io/) with [webpack-dev-server](https://github.com/webpack/webpack-dev-server), [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin) and [style-loader](https://github.com/webpack/style-loader)
@@ -187,7 +188,7 @@ All of them are transitive dependencies of the provided npm package.
 
 ## Contributing
 
-We'd love to have your helping hand on `create-react-app`! See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on what we're looking for and how to get started.
+We'd love to have your helping hand on `create-magic-component`! See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on what we're looking for and how to get started.
 
 ## Acknowledgements
 
@@ -220,5 +221,4 @@ Notable alternatives also include:
 * [dev-toolkit](https://github.com/stoikerty/dev-toolkit)
 * [tarec](https://github.com/geowarin/tarec)
 
-You can also use module bundlers like [webpack](http://webpack.github.io) and [Browserify](http://browserify.org/) directly.<br>
-React documentation includes [a walkthrough](https://facebook.github.io/react/docs/package-management.html) on this topic.
+You can also use module bundlers like [webpack](http://webpack.github.io) and [Browserify](http://browserify.org/) directly.
