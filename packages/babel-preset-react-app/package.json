@@ -1,11 +1,11 @@
 {
   "name": "babel-preset-react-app",
   "version": "1.0.0",
-  "description": "Babel preset used by Create React App",
-  "repository": "facebookincubator/create-react-app",
+  "description": "Babel preset used by Create Magic Component",
+  "repository": "magic-FE/create-magic-component",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/facebookincubator/create-react-app/issues"
+    "url": "https://github.com/magic-FE/create-magic-component/issues"
   },
   "files": [
     "index.js"

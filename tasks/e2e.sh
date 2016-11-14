@@ -37,7 +37,7 @@ function handle_exit {
 }
 
 function create_react_app {
-  node "$temp_cli_path"/node_modules/create-react-app/index.js $*
+  node "$temp_cli_path"/node_modules/create-magic-component/index.js $*
 }
 
 # Exit the script with a helpful error message when any error is encountered
@@ -59,7 +59,7 @@ npm install
 ./node_modules/.bin/eslint --ignore-path .gitignore ./
 
 # ******************************************************************************
-# First, test the create-react-app development environment.
+# First, test the create-magic-component development environment.
 # This does not affect our users but makes sure we can develop it.
 # ******************************************************************************
 
@@ -81,11 +81,11 @@ CI=true npm test
 npm start -- --smoke-test
 
 # ******************************************************************************
-# Next, pack react-scripts and create-react-app so we can verify they work.
+# Next, pack react-scripts and create-magic-component so we can verify they work.
 # ******************************************************************************
 
 # Pack CLI
-cd $root_path/packages/create-react-app
+cd $root_path/packages/create-magic-component
 cli_path=$PWD/`npm pack`
 
 # Go to react-scripts
@@ -114,7 +114,7 @@ cd $temp_app_path
 create_react_app --scripts-version=$scripts_path test-app
 
 # ******************************************************************************
-# Now that we used create-react-app to create an app depending on react-scripts,
+# Now that we used create-magic-component to create an app depending on react-scripts,
 # let's make sure all npm scripts are in the working state.
 # ******************************************************************************
 

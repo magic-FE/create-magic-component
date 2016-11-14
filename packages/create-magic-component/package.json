@@ -1,23 +1,23 @@
 {
-  "name": "create-react-app",
+  "name": "create-magic-component",
   "version": "0.6.0",
   "keywords": [
     "react"
   ],
-  "description": "Create React apps with no build configuration.",
-  "repository": "facebookincubator/create-react-app",
+  "description": "Create Magic Component with no build configuration.",
+  "repository": "magic-FE/create-magic-component",
   "license": "BSD-3-Clause",
   "engines": {
     "node": ">=4"
   },
   "bugs": {
-    "url": "https://github.com/facebookincubator/create-react-app/issues"
+    "url": "https://github.com/magic-FE/create-magic-component/issues"
   },
   "files": [
     "index.js"
   ],
   "bin": {
-    "create-react-app": "./index.js"
+    "create-magic-component": "./index.js"
   },
   "dependencies": {
     "chalk": "^1.1.1",

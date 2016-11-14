@@ -1,18 +1,18 @@
 # babel-preset-react-app
 
-This package includes the Babel preset used by [Create React App](https://github.com/facebookincubator/create-react-app).  
+This package includes the Babel preset used by [Create Magic Component](https://github.com/magic-FE/create-magic-component).  
 Please refer to its documentation:
 
-* [Getting Started](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started) – How to create a new app.
-* [User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md) – How to develop apps bootstrapped with Create React App.
+* [Getting Started](https://github.com/magic-FE/create-magic-component/blob/master/README.md#getting-started) – How to create a new component.
+* [User Guide](https://github.com/magic-FE/create-magic-component/blob/master/packages/create-magic-component/README.md) – How to develop components bootstrapped with Create Magic Component.
 
-## Usage in Create React App Projects
+## Usage in Create Magic Component Projects
 
-The easiest way to use this configuration is with [Create React App](https://github.com/facebookincubator/create-react-app), which includes it by default. **You don’t need to install it separately in Create React App projects.**
+The easiest way to use this configuration is with [Create Magic Component](https://github.com/magic-FE/create-magic-component), which includes it by default. **You don’t need to install it separately in Create Magic Component projects.**
 
-## Usage Outside of Create React App
+## Usage Outside of Create Magic Component
 
-If you want to use this Babel preset in a project not built with Create React App, you can install it with following steps.
+If you want to use this Babel preset in a project not built with Create Magic Component, you can install it with following steps.
 
 First, [install Babel](https://babeljs.io/docs/setup/).
 

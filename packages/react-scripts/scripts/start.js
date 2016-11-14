@@ -148,7 +148,7 @@ function addMiddleware(devServer) {
   var proxy = require(paths.appPackageJson).proxy;
   devServer.use(historyApiFallback({
     // Paths with dots should still use the history fallback.
-    // See https://github.com/facebookincubator/create-react-app/issues/387.
+    // See https://github.com/magic-FE/create-magic-component/issues/387.
     disableDotRule: true,
     // For single page apps, we generally want to fallback to /index.html.
     // However we also want to respect `proxy` for API calls.
@@ -228,7 +228,7 @@ function runDevServer(host, port, protocol) {
     // by listening to the compiler events with `compiler.plugin` calls above.
     quiet: true,
     // Reportedly, this avoids CPU overload on some systems.
-    // https://github.com/facebookincubator/create-react-app/issues/293
+    // https://github.com/magic-FE/create-magic-component/issues/293
     watchOptions: {
       ignored: /node_modules/
     },
