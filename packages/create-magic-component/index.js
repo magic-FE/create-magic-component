@@ -84,7 +84,7 @@ function createApp(name, verbose, version) {
   }
 
   console.log(
-    'Creating a new React app in ' + root + '.'
+    'Creating a new React Component in ' + root + '.'
   );
   console.log();
 
