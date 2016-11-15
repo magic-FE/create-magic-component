@@ -1,5 +1,5 @@
 {
-  "name": "react-scripts",
+  "name": "magic-scripts",
   "version": "0.7.0",
   "description": "Configuration and scripts for Create Magic Component.",
   "repository": "magic-FE/create-magic-component",
@@ -20,7 +20,7 @@
     "utils"
   ],
   "bin": {
-    "react-scripts": "./bin/react-scripts.js"
+    "magic-scripts": "./bin/magic-scripts.js"
   },
   "dependencies": {
     "autoprefixer": "6.5.1",
@@ -52,6 +52,7 @@
     "http-proxy-middleware": "0.17.2",
     "jest": "16.0.2",
     "json-loader": "0.5.4",
+    "less-loader": "2.2.3",
     "object-assign": "4.1.0",
     "path-exists": "2.1.0",
     "postcss-loader": "1.0.0",
@@ -106,6 +107,7 @@
     "http-proxy-middleware",
     "jest",
     "json-loader",
+    "less-loader",
     "object-assign",
     "path-exists",
     "postcss-loader",

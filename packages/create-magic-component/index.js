@@ -53,8 +53,8 @@ var pathExists = require('path-exists');
  *   --scripts-version <alternative package>
  *     Example of valid values:
  *     - a specific npm version: "0.22.0-rc1"
- *     - a .tgz archive from any npm repo: "https://registry.npmjs.org/react-scripts/-/react-scripts-0.20.0.tgz"
- *     - a package prepared with `tasks/clean_pack.sh`: "/Users/home/vjeux/create-magic-component/react-scripts-0.22.0.tgz"
+ *     - a .tgz archive from any npm repo: "https://registry.npmjs.org/magic-scripts/-/magic-scripts-0.20.0.tgz"
+ *     - a package prepared with `tasks/clean_pack.sh`: "/Users/home/vjeux/create-magic-component/magic-scripts-0.22.0.tgz"
  */
 var commands = argv._;
 if (commands.length === 0) {
@@ -101,7 +101,7 @@ function createApp(name, verbose, version) {
   process.chdir(root);
 
   console.log('Installing packages. This might take a couple minutes.');
-  console.log('Installing react-scripts from npm...');
+  console.log('Installing magic-scripts from npm...');
   console.log();
 
   run(root, appName, version, verbose, originalDirectory);
@@ -139,7 +139,7 @@ function run(root, appName, version, verbose, originalDirectory) {
 }
 
 function getInstallPackage(version) {
-  var packageToInstall = 'react-scripts';
+  var packageToInstall = 'magic-scripts';
   var validSemver = semver.valid(version);
   if (validSemver) {
     packageToInstall += '@' + validSemver;
@@ -153,7 +153,7 @@ function getInstallPackage(version) {
 // Extract package name from tarball url or path.
 function getPackageName(installPackage) {
   if (installPackage.indexOf('.tgz') > -1) {
-    // The package name could be with or without semver version, e.g. react-scripts-0.2.0-alpha.1.tgz
+    // The package name could be with or without semver version, e.g. magic-scripts-0.2.0-alpha.1.tgz
     // However, this function returns package name only wihout semver version.
     return installPackage.match(/^.+\/(.+?)(?:-\d+.+)?\.tgz$/)[1];
   } else if (installPackage.indexOf('@') > 0) {
@@ -191,7 +191,7 @@ function checkNodeVersion(packageName) {
 function checkAppName(appName) {
   // TODO: there should be a single place that holds the dependencies
   var dependencies = ['react', 'react-dom'];
-  var devDependencies = ['react-scripts'];
+  var devDependencies = ['magic-scripts'];
   var allDependencies = dependencies.concat(devDependencies).sort();
 
   if (allDependencies.indexOf(appName) >= 0) {

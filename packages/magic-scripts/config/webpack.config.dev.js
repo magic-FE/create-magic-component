@@ -93,7 +93,7 @@ module.exports = {
   },
   // @remove-on-eject-begin
   // Resolve loaders (webpack plugins for CSS, images, transpilation) from the
-  // directory of `react-scripts` itself rather than the project directory.
+  // directory of `magic-scripts` itself rather than the project directory.
   resolveLoader: {
     root: paths.ownNodeModules,
     moduleTemplates: ['*-loader']
@@ -134,6 +134,16 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css?importLoaders=1!postcss'
+      },
+      // "postcss" loader applies autoprefixer to our CSS.
+      // "css" loader resolves paths in CSS and adds assets as dependencies.
+      // "style" loader turns CSS into JS modules that inject <style> tags.
+      // "less" loader makes less to css file. 
+      // In production, we use a plugin to extract that Less to a file, but
+      // in development "style" loader enables hot editing of CSS.
+      {
+        test: /\.less$/,
+        loader: 'style!css?importLoaders=1!postcss!less'
       },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.

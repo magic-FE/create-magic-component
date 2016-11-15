@@ -99,7 +99,7 @@ module.exports = {
   },
   // @remove-on-eject-begin
   // Resolve loaders (webpack plugins for CSS, images, transpilation) from the
-  // directory of `react-scripts` itself rather than the project directory.
+  // directory of `magic-scripts` itself rather than the project directory.
   resolveLoader: {
     root: paths.ownNodeModules,
     moduleTemplates: ['*-loader']

@@ -52,17 +52,17 @@
 Create Magic Component is divided into two packages:
 
 * `create-magic-component` is a global command-line utility that you use to create new react component projects.
-* `react-scripts` is a development dependency in the generated projects (including this one).
+* `magic-scripts` is a development dependency in the generated projects (including this one).
 
-You almost never need to update `create-magic-component` itself: it delegates all the setup to `react-scripts`.
+You almost never need to update `create-magic-component` itself: it delegates all the setup to `magic-scripts`.
 
-When you run `create-magic-component`, it always creates the project with the latest version of `react-scripts` so you’ll get all the new features and improvements in newly created apps automatically.
+When you run `create-magic-component`, it always creates the project with the latest version of `magic-scripts` so you’ll get all the new features and improvements in newly created apps automatically.
 
-To update an existing project to a new version of `react-scripts`, [open the changelog](https://github.com/magic-FE/create-magic-component/blob/master/CHANGELOG.md), find the version you’re currently on (check `package.json` in this folder if you’re not sure), and apply the migration instructions for the newer versions.
+To update an existing project to a new version of `magic-scripts`, [open the changelog](https://github.com/magic-FE/create-magic-component/blob/master/CHANGELOG.md), find the version you’re currently on (check `package.json` in this folder if you’re not sure), and apply the migration instructions for the newer versions.
 
-In most cases bumping the `react-scripts` version in `package.json` and running `npm install` in this folder should be enough, but it’s good to consult the [changelog](https://github.com/magic-FE/create-magic-component/blob/master/CHANGELOG.md) for potential breaking changes.
+In most cases bumping the `magic-scripts` version in `package.json` and running `npm install` in this folder should be enough, but it’s good to consult the [changelog](https://github.com/magic-FE/create-magic-component/blob/master/CHANGELOG.md) for potential breaking changes.
 
-We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
+We commit to keeping the breaking changes minimal so you can upgrade `magic-scripts` painlessly.
 
 ## Sending Feedback
 
@@ -142,7 +142,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Displaying Lint Output in the Editor
 
->Note: this feature is available with `react-scripts@0.2.0` and higher.
+>Note: this feature is available with `magic-scripts@0.2.0` and higher.
 
 Some editors, including Sublime Text, Atom, and Visual Studio Code, provide plugins for ESLint.
 
@@ -338,7 +338,7 @@ An alternative way of handling static assets is described in the next section.
 
 ## Using the `public` Folder
 
->Note: this feature is available with `react-scripts@0.5.0` and higher.
+>Note: this feature is available with `magic-scripts@0.5.0` and higher.
 
 Normally we encourage you to `import` assets in JavaScript files as described above. This mechanism provides a number of benefits:
 
@@ -432,7 +432,7 @@ Re-run flow, and you shouldn’t get any extra issues.
 
 ## Adding Custom Environment Variables
 
->Note: this feature is available with `react-scripts@0.2.3` and higher.
+>Note: this feature is available with `magic-scripts@0.2.3` and higher.
 
 Your project can consume variables declared in your environment as if they were declared locally in your JS files. By
 default you will have `NODE_ENV` defined for you, and any other environment variables starting with
@@ -507,7 +507,7 @@ REACT_APP_SECRET_CODE=abcdef npm start
 
 ### Adding Development Environment Variables In `.env`
 
->Note: this feature is available with `react-scripts@0.5.0` and higher.
+>Note: this feature is available with `magic-scripts@0.5.0` and higher.
 
 To define permanent environment variables, create a file called `.env` in the root of your project:
 
@@ -544,7 +544,7 @@ Check out [this tutorial](https://www.fullstackreact.com/articles/using-create-r
 
 ## Proxying API Requests in Development
 
->Note: this feature is available with `react-scripts@0.2.3` and higher.
+>Note: this feature is available with `magic-scripts@0.2.3` and higher.
 
 People often serve the front-end React app from the same host and port as their backend implementation.<br>
 For example, a production setup might look like this after the app is deployed:
@@ -581,7 +581,7 @@ If the `proxy` option is **not** flexible enough for you, alternatively you can:
 
 ## Using HTTPS in Development
 
->Note: this feature is available with `react-scripts@0.4.0` and higher.
+>Note: this feature is available with `magic-scripts@0.4.0` and higher.
 
 You may require the dev server to serve pages over HTTPS. One particular case where this could be useful is when using [the "proxy" feature](#proxying-api-requests-in-development) to proxy requests to an API server when that API server is itself serving HTTPS.
 
@@ -621,7 +621,7 @@ If you use a Node server, you can even share the route matching logic between th
 
 ## Running Tests
 
->Note: this feature is available with `react-scripts@0.3.0` and higher.<br>
+>Note: this feature is available with `magic-scripts@0.3.0` and higher.<br>
 >[Read the migration guide to learn how to enable it in older projects!](https://github.com/magic-FE/create-magic-component/blob/master/CHANGELOG.md#migrating-from-023-to-030)
 
 Create React App uses [Jest](https://facebook.github.io/jest/) as its test runner. To prepare for this integration, we did a [major revamp](https://facebook.github.io/jest/blog/2016/09/01/jest-15.html) of Jest so if you heard bad things about it years ago, give it another try.
@@ -752,7 +752,7 @@ and then use them in your tests like you normally do.
 
 ### Initializing Test Environment
 
->Note: this feature is available with `react-scripts@0.4.0` and higher.
+>Note: this feature is available with `magic-scripts@0.4.0` and higher.
 
 If your app uses a browser API that you need to mock in your tests or if you just need a global setup before running your tests, add a `src/setupTests.js` to your project. It will be automatically executed before running your tests.
 
@@ -832,7 +832,7 @@ By default, the `package.json` of the generated project looks like this:
   // ...
   "scripts": {
     // ...
-    "test": "react-scripts test --env=jsdom"
+    "test": "magic-scripts test --env=jsdom"
   }
 ```
 
@@ -872,7 +872,7 @@ This will let Create React App correctly infer the root path to use in the gener
 
 ### GitHub Pages
 
->Note: this feature is available with `react-scripts@0.2.0` and higher.
+>Note: this feature is available with `magic-scripts@0.2.0` and higher.
 
 Open your `package.json` and add a `homepage` field:
 
@@ -980,5 +980,5 @@ Note that in order to support routers that use HTML5 `pushState` API, you may wa
 
 ## Something Missing?
 
-If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/magic-FE/create-magic-component/issues) or [contribute some!](https://github.com/magic-FE/create-magic-component/edit/master/packages/react-scripts/template/README.md)
+If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/magic-FE/create-magic-component/issues) or [contribute some!](https://github.com/magic-FE/create-magic-component/edit/master/packages/magic-scripts/template/README.md)
 

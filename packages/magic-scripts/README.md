@@ -1,4 +1,4 @@
-# react-scripts
+# magic-scripts
 
 This package includes scripts and configuration used by [Create Magic Component](https://github.com/magic-FE/create-magic-component).  
 Please refer to its documentation:
