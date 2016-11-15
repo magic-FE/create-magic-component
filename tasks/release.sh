@@ -7,7 +7,7 @@
 # of patent rights can be found in the PATENTS file in the same directory.
 
 # ******************************************************************************
-# This releases an update to the `react-scripts` package.
+# This releases an update to the `magic-scripts` package.
 # Don't use `npm publish` for it.
 # Read the release instructions:
 # https://github.com/magic-FE/create-magic-component/blob/master/CONTRIBUTING.md#cutting-a-release
@@ -45,7 +45,7 @@ rm -rf ~/.npm
 npm cache clear
 npm install
 
-cd packages/react-scripts
+cd packages/magic-scripts
 # Force dedupe
 npm dedupe
 

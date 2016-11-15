@@ -18,7 +18,7 @@ function cleanup {
   echo 'Cleaning up.'
   cd $root_path
   # Uncomment when snapshot testing is enabled by default:
-  # rm ./packages/react-scripts/template/src/__snapshots__/App.test.js.snap
+  # rm ./packages/magic-scripts/template/src/__snapshots__/App.test.js.snap
   rm -rf $temp_cli_path $temp_app_path
 }
 
@@ -36,7 +36,7 @@ function handle_exit {
   exit
 }
 
-function create_react_app {
+function create_magic_component {
   node "$temp_cli_path"/node_modules/create-magic-component/index.js $*
 }
 
@@ -81,22 +81,22 @@ CI=true npm test
 npm start -- --smoke-test
 
 # ******************************************************************************
-# Next, pack react-scripts and create-magic-component so we can verify they work.
+# Next, pack magic-scripts and create-magic-component so we can verify they work.
 # ******************************************************************************
 
 # Pack CLI
 cd $root_path/packages/create-magic-component
 cli_path=$PWD/`npm pack`
 
-# Go to react-scripts
-cd $root_path/packages/react-scripts
+# Go to magic-scripts
+cd $root_path/packages/magic-scripts
 
-# Like bundle-deps, this script modifies packages/react-scripts/package.json,
+# Like bundle-deps, this script modifies packages/magic-scripts/package.json,
 # copying own dependencies (those in the `packages` dir) to bundledDependencies
 node $root_path/tasks/bundle-own-deps.js
 
-# Finally, pack react-scripts
-scripts_path=$root_path/packages/react-scripts/`npm pack`
+# Finally, pack magic-scripts
+scripts_path=$root_path/packages/magic-scripts/`npm pack`
 
 # ******************************************************************************
 # Now that we have packed them, create a clean app folder and install them.
@@ -111,10 +111,10 @@ npm install $cli_path
 # Install the app in a temporary location
 temp_app_path=`mktemp -d 2>/dev/null || mktemp -d -t 'temp_app_path'`
 cd $temp_app_path
-create_react_app --scripts-version=$scripts_path test-app
+create_magic_component --scripts-version=$scripts_path test-app
 
 # ******************************************************************************
-# Now that we used create-magic-component to create an app depending on react-scripts,
+# Now that we used create-magic-component to create an app depending on magic-scripts,
 # let's make sure all npm scripts are in the working state.
 # ******************************************************************************
 
@@ -149,7 +149,7 @@ echo yes | npm run eject
 npm link $root_path/packages/babel-preset-react-app
 npm link $root_path/packages/eslint-config-react-app
 npm link $root_path/packages/react-dev-utils
-npm link $root_path/packages/react-scripts
+npm link $root_path/packages/magic-scripts
 
 # Test the build
 npm run build
@@ -177,35 +177,35 @@ npm start -- --smoke-test
 # ******************************************************************************
 
 cd $temp_app_path
-create_react_app --scripts-version=0.4.0 test-app-version-number
+create_magic_component --scripts-version=0.4.0 test-app-version-number
 cd test-app-version-number
 
 # Check corresponding scripts version is installed.
-test -e node_modules/react-scripts
-grep '"version": "0.4.0"' node_modules/react-scripts/package.json
+test -e node_modules/magic-scripts
+grep '"version": "0.4.0"' node_modules/magic-scripts/package.json
 
 # ******************************************************************************
 # Test --scripts-version with a tarball url
 # ******************************************************************************
 
 cd $temp_app_path
-create_react_app --scripts-version=https://registry.npmjs.org/react-scripts/-/react-scripts-0.4.0.tgz test-app-tarball-url
+create_magic_component --scripts-version=https://registry.npmjs.org/magic-scripts/-/magic-scripts-0.4.0.tgz test-app-tarball-url
 cd test-app-tarball-url
 
 # Check corresponding scripts version is installed.
-test -e node_modules/react-scripts
-grep '"version": "0.4.0"' node_modules/react-scripts/package.json
+test -e node_modules/magic-scripts
+grep '"version": "0.4.0"' node_modules/magic-scripts/package.json
 
 # ******************************************************************************
-# Test --scripts-version with a custom fork of react-scripts
+# Test --scripts-version with a custom fork of magic-scripts
 # ******************************************************************************
 
 cd $temp_app_path
-create_react_app --scripts-version=react-scripts-fork test-app-fork
+create_magic_component --scripts-version=magic-scripts-fork test-app-fork
 cd test-app-fork
 
 # Check corresponding scripts version is installed.
-test -e node_modules/react-scripts-fork
+test -e node_modules/magic-scripts-fork
 
 # Cleanup
 cleanup

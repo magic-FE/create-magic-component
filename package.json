@@ -1,13 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "build": "node packages/react-scripts/scripts/build.js",
+    "build": "node packages/magic-scripts/scripts/build.js",
     "create-magic-component": "tasks/cra.sh",
     "e2e": "tasks/e2e.sh",
     "postinstall": "lerna bootstrap",
     "publish": "tasks/release.sh",
-    "start": "node packages/react-scripts/scripts/start.js",
-    "test": "node packages/react-scripts/scripts/test.js --env=jsdom"
+    "start": "node packages/magic-scripts/scripts/start.js",
+    "test": "node packages/magic-scripts/scripts/test.js --env=jsdom"
   },
   "devDependencies": {
     "babel-eslint": "6.1.2",

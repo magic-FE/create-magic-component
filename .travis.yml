@@ -6,6 +6,6 @@ node_js:
 cache:
   directories:
   - node_modules
-  - packages/create-react-app/node_modules
-  - packages/react-scripts/node_modules
+  - packages/create-magic-component/node_modules
+  - packages/magic-scripts/node_modules
 script: tasks/e2e.sh

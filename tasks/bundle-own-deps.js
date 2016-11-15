@@ -9,14 +9,14 @@
  */
 'use strict';
 
-// Like bundle-deps, this script modifies packages/react-scripts/package.json,
+// Like bundle-deps, this script modifies packages/magic-scripts/package.json,
 // copying own dependencies (those in the `packages` dir) to bundledDependencies
 
 const fs = require('fs');
 const path = require('path');
 
 const packagesDir = path.join(__dirname, '../packages');
-const pkgFilename = path.join(packagesDir, 'react-scripts/package.json');
+const pkgFilename = path.join(packagesDir, 'magic-scripts/package.json');
 const data = require(pkgFilename);
 
 data.bundledDependencies = fs.readdirSync(packagesDir)

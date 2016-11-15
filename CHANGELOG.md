@@ -1,3 +1,9 @@
+## 0.8.0 (November 15, 2016)
+### Big Change
+* fork from create-react-app and rename create-magic-component
+* change react-scripts to magic-scripts
+* add less loader to handle less file
+
 ## 0.7.0 (October 22, 2016)
 
 ### Build Dependency (`react-scripts`)

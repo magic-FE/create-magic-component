@@ -36,7 +36,7 @@ Tell us what actually happens.
 
 Run these commands in the project folder and fill in their results:
 
-1. `npm ls react-scripts` (if you haven’t ejected): 
+1. `npm ls magic-scripts` (if you haven’t ejected): 
 2. `node -v`: 
 3. `npm -v`:
 
@@ -47,13 +47,13 @@ Then, specify:
 
 ### Reproducible Demo
 
-Please take the time to create a new app that reproduces the issue.
+Please take the time to create a new component that reproduces the issue.
 
-Alternatively, you could copy your app that experiences the problem and start removing things until you’re left with the minimal reproducible demo.
+Alternatively, you could copy your component that experiences the problem and start removing things until you’re left with the minimal reproducible demo.
 
 (Accidentally, you might get to the root of your problem during that process.)
 
 Push to GitHub and paste the link here.
 
-By doing this, you're helping the Create React App contributors a big time!
+By doing this, you're helping the Create Magic Component contributors a big time!
 Demonstrable issues gets fixed faster.
