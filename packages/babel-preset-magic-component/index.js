@@ -44,7 +44,8 @@ const plugins = [
 // https://github.com/babel/babel/issues/4539
 // https://github.com/magic-FE/create-magic-component/issues/720
 // It’s also nice that we can enforce `NODE_ENV` being specified.
-var env = process.env.BABEL_ENV || process.env.NODE_ENV;
+// default is production
+var env = process.env.BABEL_ENV || process.env.NODE_ENV || 'production';
 if (env !== 'development' && env !== 'test' && env !== 'production') {
   throw new Error(
     'Using `babel-preset-magic-component` requires that you specify `NODE_ENV` or '+

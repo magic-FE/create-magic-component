@@ -25,6 +25,7 @@ module.exports = function(appPath, appName, verbose, originalDirectory) {
   // Setup the script rules
   appPackage.scripts = {
     'start': 'magic-scripts start',
+    'dist': 'magic-scripts dist',
     'build': 'magic-scripts build',
     'test': 'magic-scripts test --env=jsdom',
     'eject': 'magic-scripts eject'

@@ -27,12 +27,13 @@ var rimrafSync = require('rimraf').sync;
 var webpack = require('webpack');
 var config = require('../config/webpack.config.prod');
 var paths = require('../config/paths');
-var checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
+var checkRequiredFiles = require('magic-dev-utils/checkRequiredFiles');
 var recursive = require('recursive-readdir');
 var stripAnsi = require('strip-ansi');
 
 // Warn and crash if required files are missing
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
+  console.error('Please detect whether the following file exists:\n' + paths.app.appHtml + '\n' + paths.appIndexJs + '\n');
   process.exit(1);
 }
 

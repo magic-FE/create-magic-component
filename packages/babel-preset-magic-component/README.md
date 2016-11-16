@@ -20,6 +20,6 @@ Then create a file named `.babelrc` with following contents in the root folder o
 
   ```js
   {
-    "presets": ["react-app"]
+    "presets": ["magic-component"]
   }
   ```
