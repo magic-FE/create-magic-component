@@ -1,4 +1,4 @@
-# react-dev-utils
+# magic-dev-utils
 
 This package includes some utilities used by [Create Magic Component](https://github.com/magic-FE/create-magic-component).  
 Please refer to its documentation:
@@ -26,7 +26,7 @@ It works in tandem with [HtmlWebpackPlugin](https://github.com/ampedandwired/htm
 ```js
 var path = require('path');
 var HtmlWebpackPlugin = require('html-dev-plugin');
-var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
+var InterpolateHtmlPlugin = require('magic-dev-utils/InterpolateHtmlPlugin');
 
 // Webpack config
 var publicUrl = '/my-custom-url';
@@ -64,7 +64,7 @@ See [#186](https://github.com/magic-FE/create-magic-component/issues/186) for de
 
 ```js
 var path = require('path');
-var WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
+var WatchMissingNodeModulesPlugin = require('magic-dev-utils/WatchMissingNodeModulesPlugin');
 
 // Webpack config
 module.exports = {
@@ -89,7 +89,7 @@ If a file is not found, prints a warning message and returns `false`.
 
 ```js
 var path = require('path');
-var checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
+var checkRequiredFiles = require('magic-dev-utils/checkRequiredFiles');
 
 if (!checkRequiredFiles([
   path.resolve('public/index.html'),
@@ -104,7 +104,7 @@ if (!checkRequiredFiles([
 Clears the console, hopefully in a cross-platform way.
 
 ```js
-var clearConsole = require('react-dev-utils/clearConsole');
+var clearConsole = require('magic-dev-utils/clearConsole');
 
 clearConsole();
 console.log('Just cleared the screen!');
@@ -151,7 +151,7 @@ Otherwise, falls back to [opn](https://github.com/sindresorhus/opn) behavior.
 
 ```js
 var path = require('path');
-var openBrowser = require('react-dev-utils/openBrowser');
+var openBrowser = require('magic-dev-utils/openBrowser');
 
 if (openBrowser('http://localhost:3000')) {
   console.log('The browser tab has been opened!');
@@ -167,7 +167,7 @@ If you mistype the answer, we'll always take it as a "no".
 You can control the behavior on `<Enter>` with `isYesDefault`.
 
 ```js
-var prompt = require('react-dev-utils/prompt');
+var prompt = require('magic-dev-utils/prompt');
 prompt(
   'Are you sure you want to eat all the candy?',
   /* isYesDefault */ false
@@ -195,7 +195,7 @@ module.exports = {
     // stock client:
     // require.resolve('webpack-dev-server/client') + '?/',
     // require.resolve('webpack/hot/dev-server'),
-    'react-dev-utils/webpackHotDevClient',
+    'magic-dev-utils/webpackHotDevClient',
     'src/index'
   ],
   // ...

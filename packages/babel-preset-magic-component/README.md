@@ -1,4 +1,4 @@
-# babel-preset-react-app
+# babel-preset-magic-component
 
 This package includes the Babel preset used by [Create Magic Component](https://github.com/magic-FE/create-magic-component).  
 Please refer to its documentation:

@@ -1,5 +1,5 @@
 {
-  "name": "babel-preset-react-app",
+  "name": "babel-preset-magic-component",
   "version": "1.0.0",
   "description": "Babel preset used by Create Magic Component",
   "repository": "magic-FE/create-magic-component",

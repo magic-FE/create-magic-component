@@ -41,7 +41,7 @@ ansiHTML.setColors(colors);
 
 function createOverlayIframe(onIframeLoad) {
   var iframe = document.createElement('iframe');
-  iframe.id = 'react-dev-utils-webpack-hot-dev-client-overlay';
+  iframe.id = 'magic-dev-utils-webpack-hot-dev-client-overlay';
   iframe.src = 'about:blank';
   iframe.style.position = 'fixed';
   iframe.style.left = 0;
@@ -58,7 +58,7 @@ function createOverlayIframe(onIframeLoad) {
 
 function addOverlayDivTo(iframe) {
   var div =  iframe.contentDocument.createElement('div');
-  div.id = 'react-dev-utils-webpack-hot-dev-client-overlay-div';
+  div.id = 'magic-dev-utils-webpack-hot-dev-client-overlay-div';
   div.style.position = 'fixed';
   div.style.boxSizing = 'border-box';
   div.style.left = 0;

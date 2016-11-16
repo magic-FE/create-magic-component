@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-react-app",
+  "name": "eslint-config-magic-component",
   "version": "0.3.0",
   "description": "ESLint configuration used by Create Magic Component",
   "repository": "magic-FE/create-magic-component",
