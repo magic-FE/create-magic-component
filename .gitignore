@@ -24,6 +24,7 @@ template/src/__tests__/__snapshots__/
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build
+dist
 *.tgz
 
 # Dependency directories

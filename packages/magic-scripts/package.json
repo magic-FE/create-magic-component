@@ -4,6 +4,9 @@
   "description": "Configuration and scripts for Create Magic Component.",
   "repository": "magic-FE/create-magic-component",
   "license": "BSD-3-Clause",
+  "scripts": {
+    "dist:script": "babel template/src/component --out-dir dist"
+  },
   "engines": {
     "node": ">=4"
   },

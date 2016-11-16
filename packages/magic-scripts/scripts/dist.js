@@ -20,6 +20,8 @@ require('dotenv').config({silent: true});
 
 var chalk = require('chalk');
 var exec = require('child_process').exec;
+var fs = require('fs-extra');
+var path = require('path');
 var rimrafSync = require('rimraf').sync;
 var paths = require('../config/paths');
 var checkRequiredFiles = require('magic-dev-utils/checkRequiredFiles');
@@ -52,13 +54,24 @@ function dist() {
   console.log('Creating an optimized production component dist...');
 
   // exec babel to change src/component out to dist folder
-  exec('babel src/component --out-dir dist', function(err, stdout, stderr) {
+  exec('npm run dist:script', {
+    cwd: path.join(__dirname, '..')
+  }, function(err, stdout, stderr) {
     if(err) {
       printErrors('Failed to dist.', [err]);
       process.exit(1);
     }
     console.log(stdout);
 
+    modeDistToRoot();
+
     console.log(chalk.green('Dist successfully.'));
+  });
+}
+
+function modeDistToRoot() {
+  fs.move(path.join(__dirname, '../dist'), path.join(__dirname, '../../../dist'), {clobber: true}, function (err) {
+    if (err) return console.error(err);
+    console.log('move dist to root success.');
   });
 }

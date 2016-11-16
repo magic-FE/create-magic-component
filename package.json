@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "dist": "node packages/magic-scripts/scripts/dist.js",
     "build": "node packages/magic-scripts/scripts/build.js",
     "create-magic-component": "tasks/cra.sh",
     "e2e": "tasks/e2e.sh",

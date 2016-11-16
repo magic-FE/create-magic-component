@@ -26,6 +26,7 @@ module.exports = function(appPath, appName, verbose, originalDirectory) {
   appPackage.scripts = {
     'start': 'magic-scripts start',
     'dist': 'magic-scripts dist',
+    'dist:script': 'babel src/component --out-dir dist',
     'build': 'magic-scripts build',
     'test': 'magic-scripts test --env=jsdom',
     'eject': 'magic-scripts eject'
