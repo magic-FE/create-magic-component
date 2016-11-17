@@ -90,10 +90,13 @@ By default, runs tests related to files changes since the last commit.
 
 ### `npm run build`
 
-Builds the component for production to the `build` folder.<br>
+Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
+The build is minified and the filenames include the hashes. if you want to build your component, please use `npm run dist`.<br>
+
+### `npm run dist`
+Transform your src/component code to dist folder use babel. and transform your less code to css source.
 Your component is ready to be deployed!
 
 ## User Guide

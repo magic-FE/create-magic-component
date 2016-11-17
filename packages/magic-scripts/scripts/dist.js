@@ -72,6 +72,7 @@ function dist() {
 function modeDistToRoot() {
   fs.move(path.join(__dirname, '../dist'), path.join(__dirname, '../../../dist'), {clobber: true}, function (err) {
     if (err) return console.error(err);
-    console.log('move dist to root success.');
+    console.log('now, your component is ready to be deployed!\n');
+    console.log('cd dist && npm publish');
   });
 }
