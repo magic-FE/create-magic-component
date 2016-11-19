@@ -69,6 +69,7 @@ module.exports = {
     paths.appIndexJs
   ],
   output: {
+    libraryTarget: "umd",
     // The build folder.
     path: paths.appBuild,
     // Generated JS file names (with nested folders).
@@ -79,6 +80,7 @@ module.exports = {
     // We inferred the "public path" (such as / or /my-project) from homepage.
     publicPath: publicPath
   },
+  externals: ['react', 'react-dom'],
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
     // We read `NODE_PATH` environment variable in `paths.js` and pass paths here.
@@ -150,7 +152,7 @@ module.exports = {
         // Webpack 1.x uses Uglify plugin as a signal to minify *all* the assets
         // including CSS. This is confusing and will be removed in Webpack 2:
         // https://github.com/webpack/webpack/issues/283
-        loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1&-autoprefixer!postcss')
+        loader: 'style!css?importLoaders=1&-autoprefixer!postcss'
         // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
       },
       {
@@ -163,7 +165,7 @@ module.exports = {
         // Webpack 1.x uses Uglify plugin as a signal to minify *all* the assets
         // including CSS. This is confusing and will be removed in Webpack 2:
         // https://github.com/webpack/webpack/issues/283
-        loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1&-autoprefixer!postcss!less')
+        loader: 'style!css?importLoaders=1&-autoprefixer!postcss!less'
         // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
       },
       // JSON is not enabled by default in Webpack but both Node and Browserify
@@ -176,8 +178,9 @@ module.exports = {
       // When you `import` an asset, you get its filename.
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        loader: 'file',
+        loader: 'url',
         query: {
+          limit: 100000,
           name: 'static/media/[name].[hash:8].[ext]'
         }
       },
@@ -250,7 +253,7 @@ module.exports = {
     // Try to dedupe duplicated modules, if any:
     new webpack.optimize.DedupePlugin(),
     // Minify the code.
-    new webpack.optimize.UglifyJsPlugin({
+    /*new webpack.optimize.UglifyJsPlugin({
       compress: {
         screw_ie8: true, // React doesn't support IE8
         warnings: false
@@ -262,7 +265,7 @@ module.exports = {
         comments: false,
         screw_ie8: true
       }
-    }),
+    }),*/
     // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
     new ExtractTextPlugin('static/css/[name].[contenthash:8].css'),
     // Generate a manifest file which contains a mapping of all asset filenames

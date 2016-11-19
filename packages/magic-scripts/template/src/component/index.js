@@ -1,1 +1,3 @@
-export default 'replace your component'
+import App from './App';
+
+export default App;

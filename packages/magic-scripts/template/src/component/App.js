@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
-import './App.css';
+import './App.less.css';
 
 class App extends Component {
   render() {
@@ -11,8 +11,9 @@ class App extends Component {
           <h2>Magic Component</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          To get started, edit <code>src/component/App.js</code> and save to reload.
         </p>
+        {this.props.children}
       </div>
     );
   }

@@ -4,9 +4,6 @@
   "description": "Configuration and scripts for Create Magic Component.",
   "repository": "magic-FE/create-magic-component",
   "license": "BSD-3-Clause",
-  "scripts": {
-    "dist:script": "babel template/src/component --out-dir dist"
-  },
   "engines": {
     "node": ">=4"
   },
@@ -27,7 +24,6 @@
   },
   "dependencies": {
     "autoprefixer": "6.5.1",
-    "babel-cli": "6.18.0",
     "babel-core": "6.17.0",
     "babel-eslint": "7.0.0",
     "babel-jest": "16.0.0",
@@ -56,10 +52,12 @@
     "http-proxy-middleware": "0.17.2",
     "jest": "16.0.2",
     "json-loader": "0.5.4",
+    "less": "2.7.1",
     "less-loader": "2.2.3",
     "magic-dev-utils": "^0.3.0",
     "object-assign": "4.1.0",
     "path-exists": "2.1.0",
+    "postcss": "5.2.5",
     "postcss-loader": "1.0.0",
     "promise": "7.1.1",
     "recursive-readdir": "2.1.0",

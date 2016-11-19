@@ -91,6 +91,7 @@ function createApp(name, verbose, version) {
   var packageJson = {
     name: appName,
     version: '0.1.0',
+    main: 'dist',
     private: true,
   };
   fs.writeFileSync(

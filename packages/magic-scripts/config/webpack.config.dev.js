@@ -19,6 +19,8 @@ var WatchMissingNodeModulesPlugin = require('magic-dev-utils/WatchMissingNodeMod
 var getClientEnvironment = require('./env');
 var paths = require('./paths');
 
+return;
+
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
 var publicPath = '/';
@@ -142,7 +144,7 @@ module.exports = {
       // In production, we use a plugin to extract that Less to a file, but
       // in development "style" loader enables hot editing of CSS.
       {
-        test: /\.less$/,
+        test: /\.less.css$/,
         loader: 'style!css?importLoaders=1!postcss!less'
       },
       // JSON is not enabled by default in Webpack but both Node and Browserify

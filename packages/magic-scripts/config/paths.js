@@ -15,6 +15,7 @@ var fs = require('fs');
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/magic-FE/create-magic-component/issues/637
 var appDirectory = fs.realpathSync(process.cwd());
+
 function resolveApp(relativePath) {
   return path.resolve(appDirectory, relativePath);
 }
@@ -37,12 +38,14 @@ var nodePaths = (process.env.NODE_PATH || '')
 
 // config after eject: we're in ./config/
 module.exports = {
+  appRoot: resolveApp(''),
   appDist: resolveApp('dist'),
   appBuild: resolveApp('build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveApp('src/index.js'),
+  appIndexJs: resolveApp('src/component/index.js'),
   appPackageJson: resolveApp('package.json'),
+  appComponent: resolveApp('src/component'),
   appSrc: resolveApp('src'),
   testsSetup: resolveApp('src/setupTests.js'),
   appNodeModules: resolveApp('node_modules'),
@@ -57,11 +60,14 @@ function resolveOwn(relativePath) {
 
 // config before eject: we're in ./node_modules/magic-scripts/config/
 module.exports = {
+  appRoot: resolveApp(''),
+  appDist: resolveApp('dist'),
   appBuild: resolveApp('build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
   appIndexJs: resolveApp('src/index.js'),
   appPackageJson: resolveApp('package.json'),
+  appComponent: resolveApp('src/component'),
   appSrc: resolveApp('src'),
   testsSetup: resolveApp('src/setupTests.js'),
   appNodeModules: resolveApp('node_modules'),
@@ -74,11 +80,14 @@ module.exports = {
 // config before publish: we're in ./packages/magic-scripts/config/
 if (__dirname.indexOf(path.join('packages', 'magic-scripts', 'config')) !== -1) {
   module.exports = {
+    appRoot: resolveOwn('../../../'),
+    appDist: resolveOwn('../../../dist'),
     appBuild: resolveOwn('../../../build'),
     appPublic: resolveOwn('../template/public'),
     appHtml: resolveOwn('../template/public/index.html'),
     appIndexJs: resolveOwn('../template/src/index.js'),
     appPackageJson: resolveOwn('../package.json'),
+    appComponent: resolveOwn('../template/src/component'),
     appSrc: resolveOwn('../template/src'),
     testsSetup: resolveOwn('../template/src/setupTests.js'),
     appNodeModules: resolveOwn('../node_modules'),
