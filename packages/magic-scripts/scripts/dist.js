@@ -74,7 +74,7 @@ function moveFileToDist() {
                         if (err) return printErrors('Failed to write ' + distFile + '.', [err]);
                     });
                 });
-            } else if (file.match(/.less.css$/)) { // use less and autoprefixer
+            } else if (ext === '.css') { // use less and autoprefixer
                 fs.readFile(file, 'utf8', function(err, data) {
                     if (err) return printErrors('Failed to read file ' + distFile + '.', [err]);
                     less.render(data, {}).then(function(output) {
@@ -85,16 +85,6 @@ function moveFileToDist() {
                         });
                     }, function() {
                         printErrors('Failed to transform less file ' + distFile + '.', [err]);
-                    });
-                });
-            } else if (ext === '.css') { // use autoprefixer
-                fs.readFile(file, 'utf8', function(err, data) {
-                    if (err) return printErrors('Failed to read file ' + distFile + '.', [err]);
-                    autoprefixerPostcss(output.css, function(result) {
-                      var distCssFile = distFile.replace(/.less$/, '.css');  // change .less to .css
-                      fs.writeFile(distCssFile, result, 'utf8', function(err, data) {
-                          if (err) return printErrors('Failed to write ' + distFile + '.', [err]);
-                      });
                     });
                 });
             } else {

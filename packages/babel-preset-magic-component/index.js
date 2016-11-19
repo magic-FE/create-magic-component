@@ -35,7 +35,9 @@ const plugins = [
     // const { a, ...z } = obj;
     require.resolve('babel-plugin-transform-es2015-destructuring'),
     // const fn = ({ a, ...otherProps }) => otherProps;
-    require.resolve('babel-plugin-transform-es2015-parameters')
+    require.resolve('babel-plugin-transform-es2015-parameters'),
+    // export v from 'mod';
+    require.resolve('babel-plugin-transform-export-extensions')
   ];
 
 // This is similar to how `env` works in Babel:
