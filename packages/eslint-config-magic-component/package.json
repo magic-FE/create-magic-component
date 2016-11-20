@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-magic-component",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "ESLint configuration used by Create Magic Component",
   "repository": "magic-FE/create-magic-component",
   "license": "BSD-3-Clause",
