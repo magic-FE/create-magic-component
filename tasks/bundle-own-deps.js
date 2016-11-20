@@ -19,6 +19,8 @@ const packagesDir = path.join(__dirname, '../packages');
 const pkgFilename = path.join(packagesDir, 'magic-scripts/package.json');
 const data = require(pkgFilename);
 
+console.log(packagesDir)
+
 data.bundledDependencies = fs.readdirSync(packagesDir)
   .filter((name) => data.dependencies[name]);
 

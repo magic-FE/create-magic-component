@@ -3,8 +3,8 @@
   "scripts": {
     "dist": "node packages/magic-scripts/scripts/dist.js",
     "build": "node packages/magic-scripts/scripts/build.js",
-    "create-magic-component": "tasks/cra.sh",
-    "e2e": "tasks/e2e.sh",
+    "create-magic-component": "cd tasks && cra.sh",
+    "e2e": "cd tasks && e2e.sh",
     "postinstall": "lerna bootstrap",
     "publish": "cd tasks && release.sh",
     "start": "node packages/magic-scripts/scripts/start.js",
