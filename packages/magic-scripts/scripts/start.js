@@ -85,6 +85,7 @@ function setupCompiler(host, port, protocol) {
       console.log('  ' + chalk.cyan(protocol + '://' + host + ':' + port + '/'));
       console.log();
       console.log('Note that the development build is not optimized.');
+      console.log();
       console.log('To publish your component, use ' + chalk.cyan('npm run dist') + '.');
       console.log();
       console.log('To create a production build use ' + chalk.cyan('npm run build') + '.');

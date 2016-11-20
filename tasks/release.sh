@@ -42,20 +42,5 @@ fi
 # This modifies package.json to copy all dependencies to bundledDependencies
 node ./tasks/bundle-own-deps.js
 
-# Update deps
-# rm -rf node_modules
-# rm -rf ~/.npm
-# npm cache clear
-# npm install
-
-cd packages/magic-scripts
-# Force dedupe
-# npm dedupe
-
-# Remove node_modules
-# If not remove node_modules, publish will take much time
-rm -rf node_modules
-
 # Go!
-# ./node_modules/.bin/lerna publish --independent "$@"
-npm publish
+./node_modules/.bin/lerna publish --independent "$@"
