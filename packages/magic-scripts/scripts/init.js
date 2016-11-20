@@ -96,7 +96,7 @@ module.exports = function(appPath, appName, verbose, originalDirectory) {
     console.log('    Starts the development server.');
     console.log();
     console.log(chalk.cyan('  npm run dist'));
-    console.log('    Dist your component at src/component.');
+    console.log('    Dist your component at src/components.');
     console.log();
     console.log(chalk.cyan('  npm run build'));
     console.log('    Bundles the app into static files for production.');

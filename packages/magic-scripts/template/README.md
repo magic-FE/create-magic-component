@@ -131,7 +131,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 
 ### `npm run dist`
-Transform your src/component code to dist folder use babel. and transform your less code to css source.
+Transform your src/components code to dist folder use babel. and transform your less code to css source.
 Your component is ready to be deployed!
 
 ### `npm run eject`
