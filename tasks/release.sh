@@ -47,7 +47,7 @@ fi
 
 cd packages/magic-scripts
 # Force dedupe
-npm dedupe
+# npm dedupe
 
 # Don't bundle fsevents because it is optional and OS X-only
 # Since it's in optionalDependencies, it will attempt install outside bundle
