@@ -27,6 +27,7 @@ var fse = require('fs-extra');
 var path = require('path');
 var postcss = require('postcss');
 var rimrafSync = require('rimraf').sync;
+var babelOption = fse.readJsonSync(require.resolve('../.babelrc'));
 var paths = require('../config/paths');
 var checkRequiredFiles = require('magic-dev-utils/checkRequiredFiles');
 
@@ -68,7 +69,7 @@ function moveFileToDist() {
             var fileName = file.replace(path.dirname(file), '');
             var distFile = path.join(paths.appDist, fileName);
             if (ext === '.js' || ext === '.jsx') { // use babel
-                babel.transformFile(file, {}, function(err, result) {
+                babel.transformFile(file, babelOption, function(err, result) {
                     if (err) return printErrors('Failed to babel js|jsx file.', [err]);
                     fs.writeFile(distFile, result.code, 'utf8', function(err, data) {
                         if (err) return printErrors('Failed to write ' + distFile + '.', [err]);

@@ -39,6 +39,9 @@ if [ -n "$(git status --porcelain)" ]; then
   exit 1;
 fi
 
+# This modifies package.json to copy all dependencies to bundledDependencies
+node ./tasks/bundle-own-deps.js
+
 # Update deps
 # rm -rf node_modules
 # rm -rf ~/.npm
@@ -49,14 +52,10 @@ cd packages/magic-scripts
 # Force dedupe
 # npm dedupe
 
-# Don't bundle fsevents because it is optional and OS X-only
-# Since it's in optionalDependencies, it will attempt install outside bundle
-# rm -rf node_modules/fsevents
-
-cd $root_path
-
-# This modifies package.json to copy all dependencies to bundledDependencies
-node ./tasks/bundle-own-deps.js
+# Remove node_modules
+# If not remove node_modules, publish will take much time
+rm -rf node_modules
 
 # Go!
-./node_modules/.bin/lerna publish --independent "$@"
+# ./node_modules/.bin/lerna publish --independent "$@"
+npm publish

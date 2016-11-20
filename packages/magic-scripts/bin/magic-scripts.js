@@ -4,6 +4,7 @@ var script = process.argv[2];
 var args = process.argv.slice(3);
 
 switch (script) {
+case 'dist':	
 case 'build':
 case 'eject':
 case 'start':
