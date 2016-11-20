@@ -62,16 +62,18 @@ function printErrors(summary, errors) {
 }
 
 function moveFileToDist() {
+    var basePath = '';
     fse.copy(paths.appComponent, paths.appDist, {
         clobber: true,
         filter: function(file) {
+            basePath = basePath  || file;
             var ext = path.extname(file);
-            var fileName = file.replace(path.dirname(file), '');
+            var fileName = file.replace(basePath, '');
             var distFile = path.join(paths.appDist, fileName);
             if (ext === '.js' || ext === '.jsx') { // use babel
                 babel.transformFile(file, babelOption, function(err, result) {
                     if (err) return printErrors('Failed to babel js|jsx file.', [err]);
-                    fs.writeFile(distFile, result.code, 'utf8', function(err, data) {
+                    fse.outputFile(distFile, result.code, 'utf8', function(err, data) {
                         if (err) return printErrors('Failed to write ' + distFile + '.', [err]);
                     });
                 });
@@ -80,7 +82,7 @@ function moveFileToDist() {
                     if (err) return printErrors('Failed to read file ' + distFile + '.', [err]);
                     less.render(data, {}).then(function(output) {
                         autoprefixerPostcss(output.css, function(result) {
-                          fs.writeFile(distFile, result, 'utf8', function(err, data) {
+                          fse.outputFile(distFile, result, 'utf8', function(err, data) {
                               if (err) return printErrors('Failed to write ' + distFile + '.', [err]);
                           });
                         });

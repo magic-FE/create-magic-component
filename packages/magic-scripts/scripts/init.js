@@ -21,6 +21,8 @@ module.exports = function(appPath, appName, verbose, originalDirectory) {
   // Copy over some of the devDependencies
   appPackage.dependencies = appPackage.dependencies || {};
   appPackage.devDependencies = appPackage.devDependencies || {};
+  appPackage.peerDependencies = appPackage.peerDependencies || {"react": "^15.4.0", "react-dom": "^15.4.0"};
+  return ;
 
   // Setup the script rules
   appPackage.scripts = {
@@ -67,7 +69,6 @@ module.exports = function(appPath, appName, verbose, originalDirectory) {
     'install',
     'react',
     'react-dom',
-    '--save',
     verbose && '--verbose'
   ].filter(function(e) { return e; });
   var proc = spawn('npm', args, {stdio: 'inherit'});
